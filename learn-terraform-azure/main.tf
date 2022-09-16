@@ -16,7 +16,7 @@ provider "azurerm" {
   subscription_id = var.mySubId
 }
 
-resource "azurerm_resource_group" "rg" { # 类型+id，注意第二个参数并不是Azure资源的名字
+resource "azurerm_resource_group" "rg" { # 资源类型+资源local名称，注意local名称只用于Terraform本地使用，跟Azure没关系
   name     = "RayTerraformRG"
   location = var.defaultLocation
 
